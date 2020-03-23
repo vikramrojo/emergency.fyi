@@ -10,6 +10,26 @@
 	export let posts;
 
 	import Post from "./_post.svelte";
+
+	export let tags = [];
+
+	var tagsA = flatten(posts.map(a => {
+		const arrays = a.tagA;
+		return arrays;
+	}));
+
+	var tagsB = flatten(posts.map(b => {
+		const arrays = b.tagB;
+		return arrays;
+	}));
+
+	tags = tagsA.filter((v, i, a) => a.indexOf(v) === i) + tagsB.filter((v, i, a) => a.indexOf(v) === i)
+
+	function flatten(arr) {
+		return arr.reduce(function (flat, toFlatten) {
+			return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+		}, []);
+	}
 </script>
 
 <style>
@@ -47,3 +67,7 @@
 		{/each}
 	</ul>
 </section>
+
+{#each tags as tag}
+	{tag}
+{/each}
