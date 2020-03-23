@@ -1,5 +1,6 @@
 <script>
   export let post;
+
 </script>
 
 <li cell p="6" shadow="3" bg="white">
