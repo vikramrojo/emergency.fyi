@@ -6,10 +6,9 @@
 
 </style>
 
-<nav>
-	<ul>
+<nav p="8 sm3">
+	<ul flex>
 		<li><a aria-current='{segment === undefined ? "" : undefined}' href='.'>home</a></li>
-		<li><a aria-current='{segment === "about" ? "" : undefined}' href='about'>about</a></li>
-		<li><a rel=prefetch aria-current='{segment === "blog" ? "" : undefined}' href='blog'>blog</a></li>
+		<li ml="8"><a aria-current='{segment === "about" ? "" : undefined}' href='about'>about</a></li>
 	</ul>
 </nav>

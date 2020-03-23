@@ -1,0 +1,19 @@
+:root {
+  --body-bg-color: var(--gray-1);
+  --body-line-height: 1.75rem;
+  --button-font-size: var(--fonts-4);
+  --button-padding: 1rem;
+  --button-font-weight: var(--font-weight-bold);
+  --button-border-width: 0.125rem;
+  --code-font-size: var(--fonts-4);
+  --link-color: var(--indigo);
+  --headings-font-weight: var(--font-weight-bold);
+  --headings-line-height: 1.25;
+  --headings-margin-bottom: var(--space-3);
+  --body-font-size: var(--fonts-4);
+  --chip-font-size: 1rem;
+  /* --font-family: 'EB Garmond', serif;
+  --headings-font-family: var(--font-family); */
+  --headings-font-weight: 400;
+  --chip-link-color: var(--white);
+}

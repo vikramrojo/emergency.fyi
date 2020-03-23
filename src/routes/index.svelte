@@ -17,14 +17,14 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Sapper List Template</h1>
 
-<ul>
+<ul grid columns="3" gap="6">
 	{#each posts as post}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='{post.slug}'>{post.title}</a></li>
+		<li cell p="6" shadow="3" bg="white"><a rel='prefetch' href='{post.slug}'>{post.title}</a></li>
 	{/each}
 </ul>
