@@ -6,13 +6,16 @@
 </script>
 
 <style>
-
+main {
+  height: 100vh;
+  
+}
 </style>
 
-<Nav {segment}/>
-
-<main>
-	<slot></slot>
+<main flex="column" justify="between">
+  <section>
+    <Nav {segment} />
+    <slot />
+  </section>
+  <Footer />
 </main>
-
-<Footer/>

@@ -9,18 +9,23 @@
 <script>
 	export let posts;
 
+	import _ from 'lodash';
 	import Post from "./_post.svelte";
+	import Feature from "./_feature.svelte";
+
+	let filter = '';
+	let feature = 'PopCare';
 </script>
 
 <style>
-	[alert]{
+	[sticky]{
 		position:sticky;
 		top:0;
 	}
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Emergency FYI</title>
 </svelte:head>
 
 
@@ -29,12 +34,17 @@
     <li cell span="3">
 			<h1>Emergency FYI for COVID-19</h1>
     </li>
-    <li cell span="2">
+    <li cell>
       <h2>
-        Help exists if you know where to find it.
+        Find help in your community.
       </h2>
-      <p>The COVID-19 pandemic is overwhelming federal, state, and local capacities of the United States government. We can help you find resources and aid in your local area to navigate this ongoing crisis, and expand your network for volunteer work. Listed below are active efforts to mitigate the worst effects, organized by key topic area.</p>
+      <p>The COVID-19 pandemic is overwhelming federal, state, and local capacities of the United States government. We can help you find resources and aid in your local area to navigate this ongoing crisis, and expand your network for volunteer work.</p>
     </li>
+		{#each posts as post}
+			{#if _.some(post.title.match(feature)) }
+				<Feature {post} />
+			{/if}
+		{/each}			
   </ul>
 </section>
 
@@ -42,8 +52,19 @@
 
 <section p="8 sm3">
 	<ul grid columns="3" gap="6">
+		<li cell sticky bg="gray1">
+			<h3>Listed are active efforts to mitigate the worst effects of COVID-19.</h3>
+			<fieldset>
+				<label>Search by topic:</label>
+				<input bind:value={filter} placeholder="Filter">
+			</fieldset>
+			<h3>If this is an emergency, contact your local health department.</h3>
+			<a button href="/health-depts" mb="3">Health Departments</a>
+		</li>
 		{#each posts as post}
-			<Post {post} />
+			{#if _.some(post.tags, tag => (tag.match(filter))) }
+				<Post {post} />
+			{/if}
 		{/each}
 	</ul>
 </section>
