@@ -8,6 +8,10 @@
 
 <script>
 	export let posts;
+	import _ from 'lodash';
+	let filter = '';
+
+
 
 	import Post from "./_post.svelte";
 </script>
@@ -39,11 +43,13 @@
 </section>
 
 <div alert type="alert" color="white" class="h3" flex px="8 sm3" align="center" py="4"><span>We have 2 weeks to slow the spread of Coronavirus. Start by following the <a color="white" class="hide" href="https://www.coronavirus.gov/">US Government</a> response.</span><a button ml="4" class="hide" href="https://www.coronavirus.gov/">coronavirus.gov</a></div>
-
+<input bind:value={filter} placeholder="Filter">
 <section p="8 sm3">
 	<ul grid columns="3" gap="6">
 		{#each posts as post}
-			<Post {post} />
+			{#if _.some(post.tags, tag => (tag.match(filter))) }
+				<Post {post} />
+			{/if}
 		{/each}
 	</ul>
 </section>

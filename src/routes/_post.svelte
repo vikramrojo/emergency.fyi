@@ -7,7 +7,8 @@
   <h2>
     <a rel='prefetch' href='{post.slug}'>{post.title}</a>
   </h2>
-  <a chip mr="2" mb="2" href="/?tag={post.tagA}" class="">{post.tagA}</a>
-  <a chip mr="2" mb="2" href="/?tag={post.tagB}" class="">{post.tagB}</a>
+  {#each post.tags as tag}
+    <a chip mr="2" mb="2" href="/?tag={tag}" class="">{tag}</a>
+  {/each}
   <p>{post.description}</p>
 </li>

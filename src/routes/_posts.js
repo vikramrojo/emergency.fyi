@@ -14,8 +14,7 @@ const posts = [
     "url": "https://covidtracking.com/",
     "email": "",
     "social": "",
-    "tagA": "Tracking and Tracing",
-    "tagB": "Epidemiology and Data"
+    "tags": "Tracking and Tracing,Digital Applications"
   },
   {
     "title": "Open Collective Fiscal Sponsorhip",
@@ -23,8 +22,15 @@ const posts = [
     "url": "https://opencollective.com/foundation/updates/we-are-offering-free-fiscal-sponsorship-for-covid19-related-collectives",
     "email": "",
     "social": "",
-    "tagA": "Non-governmental Orgs",
-    "tagB": "Community Funds"
+    "tags": "Non-governmental Orgs,Treatment and Prevention"
+  },
+  {
+    "title": "",
+    "description": "",
+    "url": "",
+    "email": "",
+    "social": "",
+    "tags": ""
   }
 ];
 

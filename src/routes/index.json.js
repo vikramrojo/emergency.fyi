@@ -7,8 +7,7 @@ const contents = JSON.stringify(posts.map(post => {
 		description: post.description,
 		email: post.email,
 		social: post.social,
-		tagA: post.tagA,
-		tagB: post.tagB
+		tags: post.tags.split(','),
 	};
 }));
 
