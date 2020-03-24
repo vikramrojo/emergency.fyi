@@ -40,11 +40,6 @@
       </h2>
       <p>The COVID-19 pandemic is overwhelming federal, state, and local capacities of the United States government. We can help you find resources and aid in your local area to navigate this ongoing crisis, and expand your network for volunteer work.</p>
     </li>
-		{#each posts as post}
-			{#if _.some(post.title.match(feature)) }
-				<Feature {post} />
-			{/if}
-		{/each}			
   </ul>
 </section>
 
@@ -52,7 +47,7 @@
 
 <section p="8 sm3">
 	<ul grid columns="3" gap="6">
-		<li cell sticky bg="gray1">
+		<li cell bg="gray1">
 			<h3>Listed are active efforts to mitigate the worst effects of COVID-19.</h3>
 			<fieldset>
 				<label>Search by topic:</label>
