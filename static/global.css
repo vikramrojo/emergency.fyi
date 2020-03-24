@@ -10,8 +10,8 @@
   --headings-font-weight: var(--font-weight-bold);
   --headings-line-height: 1.25;
   --headings-margin-bottom: var(--space-3);
-  --body-font-size: var(--fonts-4);
-  --chip-font-size: 1rem;
+  --body-font-size: var(--fonts-3);
+  --chip-font-size: 0.875rem;
   /* --font-family: 'EB Garmond', serif;
   --headings-font-family: var(--font-family); */
   --headings-font-weight: 400;
