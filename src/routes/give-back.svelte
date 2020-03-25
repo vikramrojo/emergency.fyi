@@ -23,7 +23,7 @@
   <ul grid columns="3" gap="8">
     <li cell>
       <h2>Give back</h2>
-      <p>These organziation needs your help.</p>
+      <p>These organziations could use your help.</p>
       <p>Look for donation opportunity here.</p>
     </li>
 		{#each organizations as organization}
