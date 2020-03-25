@@ -16,6 +16,7 @@ body {
 
 html {
   overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -1724,12 +1725,13 @@ ul {
 
   .hide { display: none !important; }
   .show { display: block !important; }
-
+  * { overflow-wrap: break-word; }
 }
 
 @media screen and (min-width: 48rem) and (max-width: 60rem) {
 
   .hideTablet { display: none !important; }
   .showTablet { display: block !important; }
+  * { overflow-wrap: break-word; }
 
 }
