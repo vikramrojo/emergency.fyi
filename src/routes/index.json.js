@@ -8,6 +8,7 @@ const contents = JSON.stringify(posts.map(post => {
 		email: post.email,
 		social: post.social,
 		tags: post.tags.split(','),
+		donation: post.donation,
 	};
 }));
 
