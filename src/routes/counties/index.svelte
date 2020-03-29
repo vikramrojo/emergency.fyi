@@ -1,0 +1,34 @@
+<script context="module">
+	export function preload({ params, query }) {
+		return this.fetch(`counties.json`).then(r => r.json()).then(counties => {
+			return { counties };
+		});
+	}
+</script>
+
+<script>
+	export let counties;
+</script>
+
+<style>
+	ul {
+		margin: 0 0 1em 0;
+		line-height: 1.5;
+	}
+</style>
+
+<svelte:head>
+	<title>Blog</title>
+</svelte:head>
+
+<h1>Recent posts</h1>
+
+<ul>
+	{#each counties as county}
+		<!-- we're using the non-standard `rel=prefetch` attribute to
+				tell Sapper to load the data for the page as soon as
+				the user hovers over the link or taps it, instead of
+				waiting for the 'click' event -->
+		<li><a rel='prefetch' href='counties/{county.name}'>{county.name}</a></li>
+	{/each}
+</ul>

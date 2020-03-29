@@ -1,13 +1,13 @@
 <script context="module">
 	export function preload({ params, query }) {
-		return this.fetch(`index.json`).then(r => r.json()).then(posts => {
-			return { posts };
+		return this.fetch(`counties.json`).then(r => r.json()).then(counties => {
+			return { counties };
 		});
 	}
 </script>
 
 <script>
-	export let posts;
+	export let counties;
 
 	import _ from 'lodash';
 	import Post from "./_post.svelte";
@@ -18,10 +18,6 @@
 </script>
 
 <style>
-	[sticky]{
-		position:sticky;
-		top:0;
-	}
 </style>
 
 <svelte:head>
@@ -36,9 +32,9 @@
     </li>
     <li cell>
       <h2>
-        Find help in your community.
+        Get and give help in 67 impacted counties.
       </h2>
-      <p>The COVID-19 pandemic is overwhelming federal, state, and local capacities of the United States government. We can help you find resources and aid in your local area to navigate this ongoing crisis, and expand your network for volunteer work.</p>
+      <p>The COVID-19 pandemic is overwhelming capacities of local branches of United States government. We can help you find medical resources and mutual aid in your county to navigate this ongoing crisis, expand your network for volunteering and directly support local relief efforts.</p>
     </li>
   </ul>
 </section>
@@ -56,10 +52,13 @@
 			<h3>If this is an emergency, contact your local health department.</h3>
 			<a button href="/health-depts" mb="3">Health Departments</a>
 		</li>
-		{#each posts as post}
-			{#if _.some(post.tags, tag => (tag.match(filter))) }
-				<Post {post} />
-			{/if}
+		{#each counties as county}
+			<li>
+				<h2><a rel='prefetch' href='counties/{county.name}'>{county.name}, {county.state}</a></h2>
+				<ul>
+					<li>Site: <a href="{county.url}">{county.url}</a></li>
+				</ul>
+			</li>
 		{/each}
 	</ul>
 </section>
