@@ -53,7 +53,7 @@
 			<a button href="/health-depts" mb="3">Health Departments</a>
 		</li>
 		{#each counties as county}
-			<li>
+			<li cell>
 				<h2><a rel='prefetch' href='counties/{county.name}'>{county.name}, {county.state}</a></h2>
 				<ul>
 					<li>Site: <a href="{county.url}">{county.url}</a></li>
