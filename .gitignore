@@ -4,3 +4,5 @@
 yarn-error.log
 /cypress/screenshots/
 /__sapper__/
+todays-cases.csv
+cases-by-date-and-county.csv
