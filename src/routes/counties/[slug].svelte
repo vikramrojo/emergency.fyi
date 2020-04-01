@@ -19,50 +19,60 @@
 
 <style>
 
+[icon="36"] {
+	height: 36px;
+	vertical-align: text-bottom;
+}
+
 [column] {
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: 1240px;
 }
 
 </style>
 
 <svelte:head>
-	<title>{county.name}</title>
+	<title>#EmergencyFYI {county.name} County, {county.state}</title>
 </svelte:head>
 
-<section column p="8 sm3">
-	<ul grid columns="1" gap="8">
+<section bg="gray3">
+	<ul grid column columns="1" gap="8" p="8 sm3">
 
 		<li cell>
 			<h1>{county.name} County</h1>
 			<h2>{county.state}</h2>
 			<p><span chip type="danger" mr="4">Last Updated:</span><span>Friday, March 27, 2020</span></p>
-			<h3>EmergencyFYI is a resource that provides county level information to navigate this ongoing crisis, expand your network for volunteering and other direct support for local relief efforts.</h3>
-		</li>
-
-		<li cell>
-			<h2>COVID-19 Updates.</h2>
+			<h2><img src="building-hospital.svg" icon="36" mr="2" alt="icon title"/>COVID-19 Updates.</h2>
 			<ul grid gap="6" columns="3">
 				<li cell>
 					<span>Cases</span>
 					<h2>399</h2>
-					<a>Source</a>
+					Source
 				</li>
 				<li cell>
 					<span>Deaths</span>
 					<h2>5</h2>
-					<a>Source</a>
+					Source
 				</li>
 				<li cell>
 					<span>COVID-19 Peak</span>
 					<h2>April 19, 2020</h2>
-					<a>Source</a>
+					Source
 				</li>
 			</ul>
 		</li>
+	</ul>
+</section>
+
+<div alert type="alert" color="white" class="h3" flex px="8 sm3" align="center" py="4">
+	<span>EmergencyFYI is a resource that provides county level information to navigate this ongoing crisis, expanding your network for volunteering and other direct support for local relief efforts.</span>
+</div>
+
+<section column p="8 sm3">
+	<ul grid columns="1" gap="8">
 
 		<li cell>
-			<h2>What you can do?</h2>
+			<h2><img src="clipboard-check.svg" icon="36" mr="2" alt="icon title"/>What you can do?</h2>
 			<ul grid gap="6">
 				<li cell>
 					<h3>Practicing social distancing.</h3>
@@ -80,16 +90,16 @@
 		</li>
 
 		<li cell>
-			<h2>Active efforts against COVID-19.</h2>
+			<h2><img src="alert-triangle.svg" icon="36" mr="2" alt="icon title"/>Active efforts against COVID-19.</h2>
 		
 		</li>
 
 
-		<li cell bg="white" shadow="3" p="6">
-			<h2>What can your elected officials do?</h2>
+		<li cell bg="yellow" shadow="3" p="6">
+			<h2><img src="phone-call.svg" icon="36" mr="2" alt="icon title"/>What can your elected officials do?</h2>
 			<p>Elected officials need to hear from constituents concerned about the COVID-19 response.</p>
-			<ul grid columns="3" gap="6" >
-				<li>
+			<ul grid columns="4" gap="6" >
+				<li cell>
 					<h3>Indefinite social distancing</h3>
 					<p>4 in 5 voters believe we should continue to practice social distancing for as long as necessary. Even if it requires a slower economic recovery.</p>
 					<h3>{county.senator1}</h3>
@@ -97,33 +107,39 @@
 					<h3>{county.senator2}</h3>
 					<p>(123) 123-1231</p>
 				</li>		
-				<li>
+				<li cell>
 					<h3>Emergency preparedness</h3>
-					<p>We are facing a massive shortfall of personal protective equipment, ICU beds and ventilators. Voters demand that hard hit counties receive additional federal support and if necessary, declare a state of emergency.</p>				
+					<p>We are facing a massive shortfall of personal protective equipment, ICU beds, ventilators and testing kits. Voters demand that hard hit counties receive additional federal support and where necessary, declare a state of emergency.</p>				
 					<h3>{county.governor}</h3>
 					<p>(123) 123-1231</p>
 				</li>		
-				<li>
+				<li cell>
 					<h3>Absentee voting.</h3>
 					<p> Despite the disruption to civic life America will hold elections this November. Every eligible voter should be able to safely register and vote. Your Secretary of State should bolster absentee voting measures. Contact Secretary of State.</p>
 					<h3>{county.secretary}</h3>
 					<p>(123) 123-1231</p>
 				</li>
+				<li cell>
+					<h3>Economic relief.</h3>
+					<p>The COVID-19 response has necessitated a widespread shutdown of retail and service sectors, threatening millions of lost jobs. Given the quarantine, the government must bail out workers and employers by providing debt relief and emergency subsidies.</p>
+					<h3>Contact your Member of Congress.</h3>
+				</li>
 			</ul>
 		</li>
 
 		<li cell>
-			<h2>Share this page.</h2>
+			<h2><img src="message.svg" icon="36" mr="2" alt="icon title"/>Share this page.</h2>
 			<p>Take a second to share this county page on social media. Encourage people you know to stay up to date on local updates and contact your representatives to ask for an adequate emergency response and absentee voting.</p>
 		</li>
 
 		<li cell>
-			<h2>What is our goal?</h2>
+			<h2><img src="shield.svg" icon="36" mr="2" alt="icon title"/>What is our goal?</h2>
 			<p>Emergency FYI is calling on Americans to act on this health crisis by supporting our communities, preserving our public health and protecting our democracy. Elected officials can act decisively to:</p>
 			<ul class="h3">
-				<li>Enforce social distancing so long as is required to keep our communities healthy.</li>
+				<li>Enforce social distancing and shelter in place so long as is required to keep our communities healthy.</li>
 				<li>Declare a state of emergency and collect necessary medical supplies.</li>
 				<li>Provide mail ballot options and protect in-person voting options.</li>
+				<li>Provide emergency economic relief to hard hit employees and businesses impacted by quarantines.</li>
 			</ul>
 		</li>
 
