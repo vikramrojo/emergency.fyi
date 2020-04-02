@@ -41,7 +41,7 @@
 		<li cell>
 			<h1>{county.county} County</h1>
 			<h2>{county.state}</h2>
-			<p><span chip type="danger" mr="4">Last Updated:</span><span>Tuesday, March 31, 2020</span></p>
+			<p><span chip type="danger" mr="2">Last Updated</span><b>Tuesday, March 31, 2020</b></p>
 		</li>
 		<li cell>
 			<h2><img src="building-hospital.svg" icon="36" mr="2" alt="icon title"/>COVID-19 Updates.</h2>
@@ -56,7 +56,113 @@
 				</li>
 				<li cell span="2">
 					<span class="h3">Projected COVID-19 Peak <a href="https://covid19.healthdata.org/projections">(Source)</span>
-					<h2>April 19, 2020</h2>
+					<h2>
+						{#if county.state == "Alabama"}
+							April 20, 2020
+						{:else if county.state == "Alaska"}
+							April 15, 2020
+						{:else if county.state == "Arizona"}
+							April 27, 2020
+						{:else if county.state == "Arkansas"}
+							April 25, 2020
+						{:else if county.state == "California"}
+							April 28, 2020
+						{:else if county.state == "Colorado"}
+							April 17, 2020
+						{:else if county.state == "Connecticut"}
+							April 15, 2020
+						{:else if county.state == "Delaware"}
+							April 11, 2020
+						{:else if county.state == "District of Columbia"}
+							April 16, 2020
+						{:else if county.state == "Florida"}
+							May 2, 2020
+						{:else if county.state == "Georgia"}
+							April 23, 2020
+						{:else if county.state == "Hawaii"}
+							May 2, 2020
+						{:else if county.state == "Idaho"}
+							April 26, 2020
+						{:else if county.state == "Illinois"}
+							April 17, 2020
+						{:else if county.state == "Indiana"}
+							April 19, 2020
+						{:else if county.state == "Iowa"}
+							April 30, 2020
+						{:else if county.state == "Kansas"}
+							April 28, 2020
+						{:else if county.state == "Kentucky"}
+							May 16, 2020
+						{:else if county.state == "Louisiana"}
+							April 10, 2020
+						{:else if county.state == "Maine"}
+							April 17, 2020
+						{:else if county.state == "Maryland"}
+							April 28, 2020
+						{:else if county.state == "Massachusetts"}
+							April 16, 2020
+						{:else if county.state == "Michigan"}
+							April 9, 2020
+						{:else if county.state == "Minnesota"}
+							April 23, 2020
+						{:else if county.state == "Mississippi"}
+							April 22, 2020
+						{:else if county.state == "Missouri"}
+							May 22, 2020
+						{:else if county.state == "Montana"}
+							April 26, 2020
+						{:else if county.state == "Nebraska"}
+							April 23, 2020
+						{:else if county.state == "Nevada"}
+							April 21, 2020
+						{:else if county.state == "New Hampshire"}
+							April 17, 2020
+						{:else if county.state == "New Jersey"}
+							April 8, 2020
+						{:else if county.state == "New Mexico"}
+							April 24, 2020
+						{:else if county.state == "New York"}
+							April 9, 2020
+						{:else if county.state == "North Carolina"}
+							April 27, 2020
+						{:else if county.state == "North Dakota"}
+							April 21, 2020
+						{:else if county.state == "Ohio"}
+							April 19, 2020
+						{:else if county.state == "Oklahoma"}
+							April 22, 2020
+						{:else if county.state == "Oregon"}
+							May 6, 2020
+						{:else if county.state == "Pennsylvania"}
+							April 17, 2020
+						{:else if county.state == "Rhode Island"}
+							April 20, 2020
+						{:else if county.state == "South Carolina"}
+							April 27, 2020
+						{:else if county.state == "South Dakota"}
+							May 3, 2020
+						{:else if county.state == "Tennessee"}
+							April 19, 2020
+						{:else if county.state == "Texas"}
+							May 5, 2020
+						{:else if county.state == "Utah"}
+							April 23, 2020
+						{:else if county.state == "Vermont"}
+							April 9, 2020
+						{:else if county.state == "Virginia"}
+							May 20, 2020
+						{:else if county.state == "Washington"}
+							April 15, 2020
+						{:else if county.state == "West Virginia"}
+							May 3, 2020
+						{:else if county.state == "Washington"}
+							April 15, 2020
+						{:else if county.state == "Wyoming"}
+							May 4, 2020
+						{:else}
+							Unknown
+						{/if}
+					</h2>
 				</li>
 			</ul>
 		</li>
@@ -99,8 +205,8 @@
 			<p>Elected officials need to hear from constituents concerned about the COVID-19 response.</p>
 			<ul grid columns="4" gap="6" >
 				<li cell>
-					<h3>Indefinite social distancing</h3>
-					<p>4 in 5 voters believe we should continue to practice social distancing for as long as necessary. Even if it requires a slower economic recovery.</p>
+					<h3>Implement social distancing</h3>
+					<p>4 in 5 voters believe we should continue to practice social distancing for as long as necessary, even if it means a slower economic recovery. Some states have not implemented quarantine restrictions which threaten to worsen conditions.</p>
 				</li>		
 				<li cell>
 					<h3>Emergency preparedness</h3>
@@ -119,7 +225,7 @@
 
 		<li cell>
 			<h2><img src="message.svg" icon="36" mr="2" alt="icon title"/>Share this page.</h2>
-			<p>Take a second to share this county page on social media. Encourage people you know to stay up to date on local updates and contact your representatives to ask for an adequate emergency response and absentee voting.</p>
+			<h3>Take a second to share this county page on social media. Encourage people you know to stay up to date on local updates and contact your representatives to ask for an adequate emergency response.</h3>
 		</li>
 
 		<li cell>
