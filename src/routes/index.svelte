@@ -1,15 +1,14 @@
 <script context="module">
 	export function preload({ params, query }) {
-		return this.fetch(`index.json`).then(r => r.json()).then(posts => {
-			return { posts };
+		return this.fetch(`counties.json`).then(r => r.json()).then(counties => {
+			return { counties };
 		});
 	}
 </script>
 
 <script>
-	export let posts;
+	export let counties;
 
-	import _ from 'lodash';
 	import Post from "./_post.svelte";
 	import Feature from "./_feature.svelte";
 
@@ -18,13 +17,11 @@
 </script>
 
 <style>
-	[sticky]{
-		position:sticky;
-		top:0;
-	}
 </style>
 
 <svelte:head>
+	<meta name="twitter:title" content="COVID-19 Emergency FYI">
+
 	<title>Emergency FYI</title>
 </svelte:head>
 
@@ -32,34 +29,37 @@
 <section p="8 sm3" bg="gray3">
   <ul grid columns="3" gap="6">
     <li cell span="3">
-			<h1>Emergency FYI for COVID-19</h1>
+			<h1><img src="info-square.svg" icon="72" alt="icon title" class="hide" />Emergency FYI for COVID-19</h1>
+      <h2>Helping you navigate the crisis in <span color="red">116</span> impacted counties.</h2>
+			<p><span chip type="warning" mr="2">Last Updated</span><b>Tuesday, March 31, 2020</b></p>
     </li>
+
+
     <li cell>
-      <h2>
-        Find help in your community.
-      </h2>
-      <p>The COVID-19 pandemic is overwhelming federal, state, and local capacities of the United States government. We can help you find resources and aid in your local area to navigate this ongoing crisis, and expand your network for volunteer work.</p>
+      <h3>The COVID-19 pandemic is overwhelming capacities of local branches of United States government. EmergencyFYI is a resource that provides county-level information to help you navigate this ongoing crisis, expand your network for volunteering, and provide direct support for local relief efforts. If this is an emergency, contact your insurance provider, primary care physician, or your local county health department.</h3>
+			<span class="h3">Projected COVID-19 Peak <a href="https://covid19.healthdata.org/projections">(Source)</span>
+			<h2>April 15, 2020</h2>
     </li>
+		<li cell>
+			<span class="h3">US Cases <a href="https://github.com/nytimes/covid-19-data">(Source)</span>
+			<h1>187962</h1>
+		</li>
+		<li cell>
+			<span class="h3">US Deaths <a href="https://github.com/nytimes/covid-19-data">(Source)</a></span>
+			<h1>3631</h1>
+		</li>
   </ul>
 </section>
 
-<div alert type="alert" color="white" class="h3" flex px="8 sm3" align="center" py="4"><span>We have 2 weeks to slow the spread of Coronavirus. Start by following the <a color="white" class="hide" href="https://www.coronavirus.gov/">US Government</a> response.</span><a button ml="4" class="hide" href="https://www.coronavirus.gov/">coronavirus.gov</a></div>
+<div alert type="alert" color="white" class="h3" flex px="8 sm3" align="center" py="4"><span>We don't have much time to slow the spread of Coronavirus. Start by following the <a color="white" class="hide" href="https://www.coronavirus.gov/">US Government</a> response.</span><a button ml="4" class="hide" href="https://www.coronavirus.gov/">coronavirus.gov</a></div>
 
 <section p="8 sm3">
 	<ul grid columns="3" gap="6">
-		<li cell bg="gray1">
-			<h3>Listed are active efforts to mitigate the worst effects of COVID-19.</h3>
-			<fieldset>
-				<label>Search by topic:</label>
-				<input bind:value={filter} placeholder="Filter">
-			</fieldset>
-			<h3>If this is an emergency, contact your local health department.</h3>
-			<a button href="/health-depts" mb="3">Health Departments</a>
-		</li>
-		{#each posts as post}
-			{#if _.some(post.tags, tag => (tag.match(filter))) }
-				<Post {post} />
-			{/if}
+		{#each counties as county}
+			<li cell>
+				<h2><a rel='prefetch' href='counties/{county.name}'><img src="chevron-right.svg" icon="36" alt="icon title" />{county.county}, {county.state}</a></h2>
+				<p><span chip><b>{county.cases}</b> Cases</span></p>
+			</li>
 		{/each}
 	</ul>
 </section>

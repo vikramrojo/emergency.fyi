@@ -8,7 +8,7 @@
   --code-font-size: var(--fonts-4);
   --link-color: var(--indigo);
   --headings-font-weight: var(--font-weight-bold);
-  --headings-line-height: 1.25;
+  --headings-line-height: 1.5;
   --headings-margin-bottom: var(--space-3);
   /* --body-font-size: var(--fonts-3); */
   --chip-font-size: 0.875rem;
@@ -16,4 +16,27 @@
   --headings-font-family: var(--font-family); */
   --headings-font-weight: 400;
   --chip-link-color: var(--white);
+}
+
+[icon="36"] {
+	height: 36px;
+	vertical-align: text-bottom;
+}
+
+[icon="72"] {
+	height: 72px;
+	vertical-align: text-bottom;
+}
+
+[column] {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+@media screen and (max-width: 48rem) {
+  :root {
+    --h1: var(--fonts-8);
+    --h2: var(--fonts-6);
+    --h3: var(--fonts-4);
+  }
 }

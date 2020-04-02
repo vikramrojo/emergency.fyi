@@ -9,10 +9,8 @@
 <script>
 	export let organizations;
 
-	import _ from 'lodash';
 	import Donation from "./_donation.svelte";
 
-	let filter = '';
 </script>
 
 <svelte:head>
