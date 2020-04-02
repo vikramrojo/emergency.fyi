@@ -21,6 +21,9 @@
 </style>
 
 <svelte:head>
+	<meta name="twitter:title" content="COVID-19 Emergency FYI">
+	<meta name="twitter:description" content="Helping you navigate this crisis.">
+
 	<title>Emergency FYI</title>
 </svelte:head>
 

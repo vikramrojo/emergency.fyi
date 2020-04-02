@@ -32,6 +32,9 @@
 </style>
 
 <svelte:head>
+	<meta name="twitter:title" content="COVID-19 Emergency FYI in {county.state}">
+	<meta name="twitter:description" content="Helping you navigate this crisis in {county.county} County, {county.state}.">
+
 	<title>#EmergencyFYI {county.county} County, {county.state}</title>
 </svelte:head>
 
