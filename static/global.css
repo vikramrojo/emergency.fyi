@@ -18,6 +18,11 @@
   --chip-link-color: var(--white);
 }
 
+[icon="24"] {
+	height: 24px;
+	vertical-align: text-bottom;
+}
+
 [icon="36"] {
 	height: 36px;
 	vertical-align: text-bottom;
