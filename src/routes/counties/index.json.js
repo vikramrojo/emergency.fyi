@@ -2,16 +2,11 @@ import counties from './_counties.js';
 
 const contents = JSON.stringify(counties.map(county => {
 	return {
-		name: county.name,
+		name: county.slug,
+		cases: county.cases,
+		deaths: county.deaths,
+		county: county.county,
 		state: county.state,
-		url: county.healthURL,
-		facebook: county.healthFacebook,
-		twitter: county.healthTwitter,
-		phone: county.healthPhone,
-		governor: county.governor,
-		senator1: county.senator1,
-		senator2: county.senator2,
-		secretary: county.secretary,
 	};
 }));
 

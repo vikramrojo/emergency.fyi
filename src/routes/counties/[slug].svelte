@@ -32,41 +32,40 @@
 </style>
 
 <svelte:head>
-	<title>#EmergencyFYI {county.name} County, {county.state}</title>
+	<title>#EmergencyFYI {county.county} County, {county.state}</title>
 </svelte:head>
 
 <section bg="gray3">
 	<ul grid column columns="1" gap="8" p="8 sm3">
 
 		<li cell>
-			<h1>{county.name} County</h1>
+			<h1>{county.county} County</h1>
 			<h2>{county.state}</h2>
-			<p><span chip type="danger" mr="4">Last Updated:</span><span>Friday, March 27, 2020</span></p>
+			<p><span chip type="danger" mr="4">Last Updated:</span><span>Tuesday, March 31, 2020</span></p>
+		</li>
+		<li cell>
 			<h2><img src="building-hospital.svg" icon="36" mr="2" alt="icon title"/>COVID-19 Updates.</h2>
-			<ul grid gap="6" columns="3">
+			<ul grid gap="6" columns="2">
 				<li cell>
-					<span>Cases</span>
-					<h2>399</h2>
-					Source
+					<span class="h3">Cases <a href="https://github.com/nytimes/covid-19-data">(Source)</span>
+					<h1>{county.cases}</h1>
 				</li>
 				<li cell>
-					<span>Deaths</span>
-					<h2>5</h2>
-					Source
+					<span class="h3">Deaths <a href="https://github.com/nytimes/covid-19-data">(Source)</a></span>
+					<h1>{county.deaths}</h1>
 				</li>
-				<li cell>
-					<span>COVID-19 Peak</span>
+				<li cell span="2">
+					<span class="h3">Projected COVID-19 Peak <a href="https://covid19.healthdata.org/projections">(Source)</span>
 					<h2>April 19, 2020</h2>
-					Source
 				</li>
 			</ul>
 		</li>
+		<li cell>
+			<h3>EmergencyFYI is a resource that provides city- and county- level information to help you navigate this ongoing crisis, expand your network for volunteering, and provide direct support for local relief efforts. If this is an emergency, contact your insurance provider, primary care physician, or your local county health department.</h3>
+      <a button href="health-depts/">Local Health Departments</a>
+		</li>
 	</ul>
 </section>
-
-<div alert type="alert" color="white" class="h3" flex px="8 sm3" align="center" py="4">
-	<span>EmergencyFYI is a resource that provides county level information to navigate this ongoing crisis, expanding your network for volunteering and other direct support for local relief efforts.</span>
-</div>
 
 <section column p="8 sm3">
 	<ul grid columns="1" gap="8">
@@ -91,7 +90,7 @@
 
 		<li cell>
 			<h2><img src="alert-triangle.svg" icon="36" mr="2" alt="icon title"/>Active efforts against COVID-19.</h2>
-		
+			<p><span chip type="danger" mr="4">Coming soon</span></p>		
 		</li>
 
 
@@ -102,27 +101,18 @@
 				<li cell>
 					<h3>Indefinite social distancing</h3>
 					<p>4 in 5 voters believe we should continue to practice social distancing for as long as necessary. Even if it requires a slower economic recovery.</p>
-					<h3>{county.senator1}</h3>
-					<p>(123) 123-1231</p>
-					<h3>{county.senator2}</h3>
-					<p>(123) 123-1231</p>
 				</li>		
 				<li cell>
 					<h3>Emergency preparedness</h3>
 					<p>We are facing a massive shortfall of personal protective equipment, ICU beds, ventilators and testing kits. Voters demand that hard hit counties receive additional federal support and where necessary, declare a state of emergency.</p>				
-					<h3>{county.governor}</h3>
-					<p>(123) 123-1231</p>
 				</li>		
 				<li cell>
 					<h3>Absentee voting.</h3>
 					<p> Despite the disruption to civic life America will hold elections this November. Every eligible voter should be able to safely register and vote. Your Secretary of State should bolster absentee voting measures. Contact Secretary of State.</p>
-					<h3>{county.secretary}</h3>
-					<p>(123) 123-1231</p>
 				</li>
 				<li cell>
 					<h3>Economic relief.</h3>
 					<p>The COVID-19 response has necessitated a widespread shutdown of retail and service sectors, threatening millions of lost jobs. Given the quarantine, the government must bail out workers and employers by providing debt relief and emergency subsidies.</p>
-					<h3>Contact your Member of Congress.</h3>
 				</li>
 			</ul>
 		</li>

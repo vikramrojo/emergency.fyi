@@ -2,7 +2,7 @@ import posts from './_counties.js';
 
 const lookup = new Map();
 posts.forEach(post => {
-	lookup.set(post.name, JSON.stringify(post));
+	lookup.set(post.slug, JSON.stringify(post));
 });
 
 export function get(req, res, next) {
