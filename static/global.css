@@ -32,3 +32,11 @@
   margin: 0 auto;
   max-width: 1240px;
 }
+
+@media screen and (max-width: 48rem) {
+  :root {
+    --h1: var(--fonts-8);
+    --h2: var(--fonts-6);
+    --h3: var(--fonts-4);
+  }
+}

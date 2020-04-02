@@ -55,7 +55,7 @@ const counties = [
   {"slug":"St. Tammany-Louisiana","cases":"220","deaths":"4","county":"St. Tammany","state":"Louisiana"},
   {"slug":"Baltimore-Maryland","cases":"227","deaths":"1","county":"Baltimore","state":"Maryland"},
   {"slug":"Montgomery-Maryland","cases":"388","deaths":"1","county":"Montgomery","state":"Maryland"},
-  {"slug":"Prince George's-Maryland","cases":"341","deaths":"7","county":"Prince George's","state":"Maryland"},
+  {"slug":"Prince Georges-Maryland","cases":"341","deaths":"7","county":"Prince Georges","state":"Maryland"},
   {"slug":"Bristol-Massachusetts","cases":"306","deaths":"2","county":"Bristol","state":"Massachusetts"},
   {"slug":"Essex-Massachusetts","cases":"784","deaths":"12","county":"Essex","state":"Massachusetts"},
   {"slug":"Hampden-Massachusetts","cases":"354","deaths":"12","county":"Hampden","state":"Massachusetts"},

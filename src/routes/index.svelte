@@ -29,7 +29,7 @@
 <section p="8 sm3" bg="gray3">
   <ul grid columns="3" gap="6">
     <li cell span="3">
-			<h1><img src="info-square.svg" icon="72" alt="icon title" />Emergency FYI for COVID-19</h1>
+			<h1><img src="info-square.svg" icon="72" alt="icon title" class="hide" />Emergency FYI for COVID-19</h1>
       <h2>Helping you navigate the crisis in <span color="red">116</span> impacted counties.</h2>
 			<p><span chip type="warning" mr="2">Last Updated</span><b>Tuesday, March 31, 2020</b></p>
     </li>
