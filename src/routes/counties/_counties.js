@@ -109,7 +109,7 @@ const counties = [
   {"slug":"Montgomery-Pennsylvania","cases":"570","deaths":"6","county":"Montgomery","state":"Pennsylvania"},
   {"slug":"Northampton-Pennsylvania","cases":"245","deaths":"5","county":"Northampton","state":"Pennsylvania"},
   {"slug":"Philadelphia-Pennsylvania","cases":"1315","deaths":"14","county":"Philadelphia","state":"Pennsylvania"},
-  {"slug":"Unknown-Puerto Rico","cases":"239","deaths":"8","county":"Unknown","state":"Puerto Rico"},
+  {"slug":"Puerto Rico-Puerto Rico","cases":"239","deaths":"8","county":"Puerto Rico","state":"Puerto Rico"},
   {"slug":"Providence-Rhode Island","cases":"305","deaths":"0","county":"Providence","state":"Rhode Island"},
   {"slug":"Davidson-Tennessee","cases":"541","deaths":"3","county":"Davidson","state":"Tennessee"},
   {"slug":"Shelby-Tennessee","cases":"396","deaths":"1","county":"Shelby","state":"Tennessee"},

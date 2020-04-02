@@ -19,23 +19,12 @@
 
 <style>
 
-[icon="36"] {
-	height: 36px;
-	vertical-align: text-bottom;
-}
-
-[column] {
-  margin: 0 auto;
-  max-width: 1240px;
-}
-
 </style>
 
 <svelte:head>
-	<meta name="twitter:title" content="COVID-19 Emergency FYI in {county.state}">
-	<meta name="twitter:description" content="Helping you navigate this crisis in {county.county} County, {county.state}.">
+	<meta name="twitter:title" content="COVID-19 Emergency FYI in {county.county} County, {county.state}">
 
-	<title>#EmergencyFYI {county.county} County, {county.state}</title>
+	<title>Emergency FYI {county.county} County, {county.state}</title>
 </svelte:head>
 
 <section bg="gray3">
@@ -44,7 +33,7 @@
 		<li cell>
 			<h1>{county.county} County</h1>
 			<h2>{county.state}</h2>
-			<p><span chip type="danger" mr="2">Last Updated</span><b>Tuesday, March 31, 2020</b></p>
+			<p><span chip type="warning" mr="2">Last Updated</span><b>Tuesday, March 31, 2020</b></p>
 		</li>
 		<li cell>
 			<h2><img src="building-hospital.svg" icon="36" mr="2" alt="icon title"/>COVID-19 Updates.</h2>

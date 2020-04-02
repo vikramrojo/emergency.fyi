@@ -1,4 +1,6 @@
 <svelte:head>
+	<meta name="twitter:title" content="COVID-19 Emergency FYI">
+
   <title>Department of Health by State</title>
 </svelte:head>
 

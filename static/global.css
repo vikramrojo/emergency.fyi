@@ -17,3 +17,18 @@
   --headings-font-weight: 400;
   --chip-link-color: var(--white);
 }
+
+[icon="36"] {
+	height: 36px;
+	vertical-align: text-bottom;
+}
+
+[icon="72"] {
+	height: 72px;
+	vertical-align: text-bottom;
+}
+
+[column] {
+  margin: 0 auto;
+  max-width: 1240px;
+}
