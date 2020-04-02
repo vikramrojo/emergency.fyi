@@ -9,7 +9,6 @@
 <script>
 	export let counties;
 
-	import _ from 'lodash';
 	import Post from "./_post.svelte";
 	import Feature from "./_feature.svelte";
 
