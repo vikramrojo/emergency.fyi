@@ -177,7 +177,7 @@
 				</li>
 				<li cell>
 					<h3>Testing for COVID-19.</h3>
-					<p>Symptoms listed are fever, cough and shortness of breath. Most people have mild illness and are able to recover from home. Not everyone needs to be tested for COVID-19. If you experience trouble breathing, a persistent pain in the chest, confusion or an inability to arouse or are bluish in your face, get medical attention.</p>
+					<p>Symptoms listed are fever, cough and shortness of breath. Most people have mild illness and are able to recover from home. Not everyone will need to be tested for COVID-19. If you experience trouble breathing, a persistent pain in the chest, confusion or an inability to arouse or are bluish in your face, get medical attention.</p>
 				</li>
 				<li cell>
 					<h3>Connecting with relief efforts.</h3>
