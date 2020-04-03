@@ -33,7 +33,7 @@
 		<li cell>
 			<h1>{county.county} County</h1>
 			<h2>{county.state}</h2>
-			<p><span chip type="warning" mr="2">Last Updated</span><b>Tuesday, March 31, 2020</b></p>
+			<p><span chip type="warning" mr="2">Last Updated</span><b>Wednesday, April 1, 2020</b></p>
 		</li>
 		<li cell>
 			<h2><img src="building-hospital.svg" icon="36" mr="2" alt="icon title"/>COVID-19 Updates.</h2>
