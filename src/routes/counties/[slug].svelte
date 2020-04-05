@@ -3,8 +3,8 @@
 		// the `slug` parameter is available because
 		// this file is called [slug].svelte
 		const res = await this.fetch(`counties/${params.slug}.json`);
-		const data = await res.json();
-
+        const data = await res.json();
+        //liz! this file loads a county page
 		if (res.status === 200) {
 			return { county: data };
 		} else {
@@ -32,6 +32,7 @@
 
 		<li cell>
 			<h1>{county.county} County</h1>
+            <!-- liz! county is an object containing total county numbers-->
 			<h2>{county.state}</h2>
 			<p><span chip type="warning" mr="2">Last Updated</span><b>Saturday, April 4, 2020</b></p>
 		</li>
