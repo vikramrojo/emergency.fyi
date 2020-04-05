@@ -17,7 +17,7 @@
     labels: ['-6d', '-5d', '-4d', '-3d', '-2d', '-1d', 'Today'],
     datasets: [
       {
-        values: [1275, 1649, 2134, 2486, 3073, 3910, 4841],
+        values: [2486, 3073, 3911, 4841, 6228, 7121, 8499],
       }
     ]
 	};
@@ -25,7 +25,7 @@
     labels: ['-6d', '-5d', '-4d', '-3d', '-2d', '-1d', 'Today'],
     datasets: [
       {
-        values: [85533, 102648, 123628, 142161, 163796, 187834, 214461],
+        values: [142194, 163683, 188049, 214711, 244228, 276832, 311536],
       }
     ]
 	};
@@ -46,17 +46,17 @@
   <ul grid columns="6" gap="6">
     <li cell span="4">
 			<h1><img src="info-square.svg" icon="72" alt="icon title" class="hide" />Emergency FYI for COVID-19</h1>
-      <h2>Helping you navigate the crisis in <span color="red">133</span> impacted counties.</h2>
-			<p><span chip type="warning" mr="2">Last Updated</span><b>Wednesday, April 1, 2020</b></p>
+      <h2>Helping you navigate the crisis in <span color="red">182</span> impacted counties.</h2>
+			<p><span chip type="warning" mr="2">Last Updated</span><b>Saturda, April 4, 2020</b></p>
       <h3>The COVID-19 pandemic is overwhelming capacities of local branches of United States government. EmergencyFYI is a resource that provides county-level information to help you navigate this ongoing crisis, expand your network for volunteering, and provide direct support for local relief efforts. If this is an emergency, contact your insurance provider, primary care physician, or your local county health department.</h3>
 			<span class="h3">Projected Best Case COVID-19 Peak <a href="https://covid19.healthdata.org/projections">(Source)</span>
 			<h2>April 16, 2020</h2>
     </li>
 		<li cell span="2" class="hide"/>
 		<li cell>
-			<span class="h3">US Cases <a href="https://github.com/nytimes/covid-19-data">(Source)</span>
-			<h1>214,461</h1>
-			<h3 color="orange"><img src="caret-up.svg" icon="24" alt="icon title" />{214461 - 187834} Daily Increase</h3>
+			<span class="h3">US Cases <a href="https://github.com/nytimes/covid-19-data/blob/master/us-states.csv">(Source)</span>
+			<h1>311,536</h1>
+			<h3 color="orange"><img src="caret-up.svg" icon="24" alt="icon title" />{311536 - 276832} Daily Increase</h3>
 		</li>
 		<li cell>
 			<Chart
@@ -69,9 +69,9 @@
 				/>
 		</li>		
 		<li cell>
-			<span class="h3">US Deaths <a href="https://github.com/nytimes/covid-19-data">(Source)</a></span>
-			<h1>4,841</h1>
-			<h3 color="red"><img src="caret-up.svg" icon="24" alt="icon title" />{4841-3910} Daily Increase</h3>	
+			<span class="h3">US Deaths <a href="https://github.com/nytimes/covid-19-data/blob/master/us-states.csv">(Source)</a></span>
+			<h1>8,499</h1>
+			<h3 color="red"><img src="caret-up.svg" icon="24" alt="icon title" />{8499-7121} Daily Increase</h3>	
 		</li>
 		<li cell>
 			<Chart
