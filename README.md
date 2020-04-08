@@ -24,5 +24,11 @@ Sapper expects to find two directories in the root of your project —  `src` an
 
 The [src](src) directory contains the entry points for your app — `client.js`, `server.js` and (optionally) a `service-worker.js` — along with a `template.html` file and a `routes` directory.
 
-## Pulling Data
-`curl https://raw.githubusercontent.com/cipriancraciun/covid19-datasets/master/exports/nytimes/v1/us-counties/values.json > data-by-counties.json`
+## Updating Case Data
+
+Download the latest cases from the new york times data source:
+> `curl https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv > cases-by-date-and-county.csv `
+
+Group the cases by county and state and dump them as a massive JSON file so we can generate static pages and components for them:
+
+> `node group-cases-by-county.js > data-by-counties.json`
