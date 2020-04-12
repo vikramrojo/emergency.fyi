@@ -34,7 +34,7 @@
 			<h1>{county.county} County</h1>
             <!-- liz! county is an object containing total county numbers-->
 			<h2>{county.state}</h2>
-			<p><span chip type="warning" mr="2">Last Updated</span><b>Saturday, April 4, 2020</b></p>
+			<p><span chip type="warning" mr="2">Last Updated</span><b>Sunday, April 12, 2020</b></p>
 		</li>
 		<li cell>
 			<h2><img src="building-hospital.svg" icon="36" mr="2" alt="icon title"/>COVID-19 Updates.</h2>
